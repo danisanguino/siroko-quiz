@@ -89,17 +89,20 @@
       <div class="content-form__quiz">
         
         <div class="content-form__quiz--discount-code">
-          <p class="discount-code-result" id="result-code"></p>
+          <p class="discount-code-result show" id="result-code"></p>
           <button class="discount-code-copy" id="button-copy">Copiar</button>
         </div>
-        <div id="message"></div>
 
         <div class="describe-text">
           <p>Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
         </div>
 
-        <div class="content-form__quiz-clock hide">20:00</div>
-        <div class="content-form__quiz-warning hide">Se acabo el tiempo granuja</div>
+        <div class="content-form__quiz-clock show" id="count-down">
+          200
+        </div>
+        <div class="content-form__quiz-warning hide" id="time-over">
+          Código caducado. <a href="#" id="goToStep1">Reiniciar.</a>
+        </div>
 
 
         <a href="https://siroko.com" target="_blank" class="content-form__quiz--submit">Ir s siroko.com -></a>
@@ -116,6 +119,7 @@
     <p>Todos los derechos reservados. Ver bases. </p>
   </footer>
   
-  <script src="script.js"></script>
+  <!-- add type="module" abajo para poder usar importaciones y exportaciones en el js -->
+  <script src="./script.js"></script>
 </body>
 </html>
