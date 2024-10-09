@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIROKO QUIZ</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    Logo
+  </header>
+
+  <!-- Step 01 -->
+  <section class="container-step1 show ">
+
+      <div class="steps">
+        <p>PASO 1 DE 2</p>
+      </div>
+
+      <h2>¡VAMOS ALLÁ!</h2>
+
+      <div class="describe-text">
+        <p>Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida.</p>
+      </div>
+
+      <div class="content-form">
+          <p>USO SIROCO DESDE...</p>
+
+          <form class="content-form__quiz">
+            <label class="content-form__quiz--option">
+              <input type="radio" name="year" value="2016" required>
+              2016
+            </label>
+
+            <label>
+              <input type="radio" name="year" value="2017">
+              2017
+            </label>
+
+            <button type="submit" class="content-form__quiz--submit">Siguiente</button>
+          </form>
+      </div>
+
+  </section>
+
+  <!-- Step 02 -->
+  <section class="container-step2 hide">
+
+      <div class="steps">
+        <p>PASO 2 DE 2</p>
+      </div>
+
+      <h2>VAMOS, UNA MÁS</h2>
+
+      <div class="content-form">
+        <p>POR UNAS GAFAS SIROKO, YO...</p>
+
+        <form class="content-form__quiz">
+          <label class="content-form__quiz--option">
+            <input type="radio" name="option" value="Piticlan" required>
+            Piticlan
+          </label>
+
+          <label>
+            <input type="radio" name="option" value="Groumenawer">
+            Groumenawer
+          </label>
+
+          <button type="submit" class="content-form__quiz--submit">Siguiente</button>
+        </form>
+    </div>          
+
+
+  </section>
+
+  <!-- Step 03 -->
+  <section class="container-step3 hide">
+
+    <div class="steps">
+      <p>TU PREMIO ESTÁ LISTO</p>
+    </div>
+
+    <h2>¡ENHORABUENA!</h2>
+
+    <div class="content-form">
+      <p>LO PROMETIDO ES DEUDA</p>
+
+      <div class="content-form__quiz">
+        
+        <div class="content-form__quiz--discount-code">
+          <div class="discount-code-result" id="result-code"></div>
+          <button id="button-copy">Copiar</button>
+        </div>
+        <div id="message"></div>
+
+        <div class="describe-text">
+          <p>Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
+        </div>
+
+        <div class="content-form__quiz-clock hide">20:00</div>
+        <div class="content-form__quiz-warning hide">Se acabo el tiempo granuja</div>
+
+
+        <button type="submit" class="content-form__quiz--submit">Ir s siroko.com -></button>
+
+      </div>
+  </div>
+
+</section>
+
+
+  <footer>
+    <p>2016-2021 Siroko Solutions S.L.</p>
+
+    <p>Todos los derechos reservados. Ver bases. </p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

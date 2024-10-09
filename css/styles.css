@@ -1,0 +1,14 @@
+body {
+  /* background-color: aqua; */
+}
+
+/* SHOW AND HIDE STEPS OF FORMS */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
