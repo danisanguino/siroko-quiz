@@ -46,7 +46,8 @@ formStep2.addEventListener("submit", function (event) {
 });
 
 
-// // STEP 3
+// STEP 3
+
 // const buttonStep3 = document.querySelector(".container-step3 button");
 // buttonStep3.addEventListener("click", function () {
   
@@ -55,24 +56,19 @@ formStep2.addEventListener("submit", function (event) {
 // });
 
 
-//BUTTON COPY TEXT
-document.getElementById('button-copy').addEventListener('click', async function() {
-  
-  //get code from result-code
-  const text = document.getElementById('result-code');
-  text.select(); 
 
+//BUTTON COPY TEXT
+document.getElementById("button-copy").addEventListener('click', async function() {
   
-  try {
-    // Copiar el texto al portapapeles
-    await navigator.clipboard.writeText(texto.value);
-    // Mensaje de éxito
-    document.getElementById('message').innerText = 'Texto copiado!';
-    alert("Mensaje copiado bro");
-} catch (err) {
-    // Mensaje de error
-    document.getElementById('message').innerText = 'Error';
-}
+  const text = document.getElementById('result-code').innerText;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      document.getElementById("message").innerText = 'CÓDIGO COPIADO!';
+  } catch (err) {
+      document.getElementById("message").innerText = 'Error!!';
+  }
+
 });
 
 
