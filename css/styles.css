@@ -1,9 +1,8 @@
 body {
-  /* background-color: aqua; */
+  background-color: aqua;
 }
 
-/* SHOW AND HIDE STEPS OF FORMS */
-
+/* SHOW AND HIDE STEPS*/
 .hide {
   display: none;
 }

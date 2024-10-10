@@ -12,16 +12,18 @@
   </header>
 
   <!-- Step 01 -->
-  <section class="container-step1 show ">
+  <section class="container-step show" id="step1">
 
-      <div class="steps">
-        <p>PASO 1 DE 2</p>
-      </div>
+      <div class="form-header">
+        <div class="number-step">
+          <p>PASO 1 DE 2</p>
+        </div>
 
-      <h2>¡VAMOS ALLÁ!</h2>
+        <h2>¡VAMOS ALLÁ!</h2>
 
-      <div class="describe-text">
-        <p>Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida.</p>
+        <div class="describe-text">
+          <p>Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida.</p>
+        </div>
       </div>
 
       <div class="content-form">
@@ -45,13 +47,15 @@
   </section>
 
   <!-- Step 02 -->
-  <section class="container-step2 hide">
+  <section class="container-step hide" id="step2">
 
-      <div class="steps">
-        <p>PASO 2 DE 2</p>
-      </div>
+    <div class="form-header">
+        <div class="number-step">
+          <p>PASO 2 DE 2</p>
+        </div>
 
-      <h2>VAMOS, UNA MÁS</h2>
+        <h2>VAMOS, UNA MÁS</h2>
+    </div>
 
       <div class="content-form">
         <p>POR UNAS GAFAS SIROKO, YO...</p>
@@ -75,33 +79,36 @@
   </section>
 
   <!-- Step 03 -->
-  <section class="container-step3 hide">
-
-    <div class="steps">
-      <p>TU PREMIO ESTÁ LISTO</p>
+  <section class="container-step hide" id="step3">
+    
+    <div class="form-header">
+      <div class="number-step">
+        <p>TU PREMIO ESTÁ LISTO</p>
+      </div>
+      
+      <h2>¡ENHORABUENA!</h2>
     </div>
-
-    <h2>¡ENHORABUENA!</h2>
 
     <div class="content-form">
       <p>LO PROMETIDO ES DEUDA</p>
 
       <div class="content-form__quiz">
         
-        <div class="content-form__quiz--discount-code">
-          <p class="discount-code-result show" id="result-code"></p>
+        <div class="content-form__quiz--discount-code show" id="all-result-code" >
+          <p class="discount-code-result" id="result-code"></p>
           <button class="discount-code-copy" id="button-copy">Copiar</button>
         </div>
+        <div id="message"></div>
 
         <div class="describe-text">
           <p>Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
         </div>
 
-        <div class="content-form__quiz-clock show" id="count-down">
-          200
+        <div class="content-form__quiz--clock show" id="count-down">
+          20:00
         </div>
-        <div class="content-form__quiz-warning hide" id="time-over">
-          Código caducado. <a href="#" id="goToStep1">Reiniciar.</a>
+        <div class="content-form__quiz--warning hide" id="time-over">
+          Código caducado. <a href="">Reiniciar.</a>
         </div>
 
 
@@ -116,10 +123,10 @@
   <footer>
     <p>2016-2021 Siroko Solutions S.L.</p>
 
-    <p>Todos los derechos reservados. Ver bases. </p>
+    <p>Todos los derechos reservados. <a href="#">Ver bases.</a> </p>
   </footer>
   
   <!-- add type="module" abajo para poder usar importaciones y exportaciones en el js -->
-  <script src="./script.js"></script>
+  <script type="module" src="scripts/script.js"></script>
 </body>
 </html>

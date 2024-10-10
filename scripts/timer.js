@@ -1,8 +1,12 @@
+import { toMintsAndSeconds } from "./secondsConvert.js";
+
+//in seconds
+let timeRemaining = 1199;
 
 export const updateTime = () => {
 
   if (timeRemaining > 0) {
-    countDown.textContent = `${timeRemaining}`; 
+    countDown.textContent = toMintsAndSeconds(timeRemaining); 
     timeRemaining--; 
 
   } else {
@@ -13,4 +17,6 @@ export const updateTime = () => {
     timeOver.classList.add("show");
     // timeOver.classList.remove("hide");
   }
+
+  return timeRemaining;
 };
