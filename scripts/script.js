@@ -1,6 +1,6 @@
 import { toMintsAndSeconds } from "./secondsConvert.js";
 import { copyToClipboard } from "./buttonCopy.js";
-// import { updateTime } from "./timer.js";
+import { createDiscountCode } from "./discountCode.js";
 
 const step1 = document.getElementById("step1");
 const step2 = document.getElementById("step2");
@@ -21,50 +21,42 @@ let timeRemaining = 1199; //in seconds
 
 
 // STEP 1
+// The form data is saved in a variable, step 1 is hidden, and step 2 is displayed.
+
 step1.addEventListener("submit", function (event) {
+
   event.preventDefault();
   
-  //Get value from the form1
+  
   valueStep1 = step1.querySelector('input[name="year"]:checked').value;
 
-  //Show and hide
   step1.classList.add("hide");
   step1.classList.remove("show");
   step2.classList.add("show");
-  // step2.classList.remove("hide");
+  step2.classList.remove("hide");
 });
 
 
 // STEP 2
+// The form data is saved using the EventListener. This step is hidden, and STEP 3 is displayed. 
+// A discount code is generated, and the countdown begins.
+
 step2.addEventListener("submit", function (event) {
+
   event.preventDefault();
 
-  //Get value from the form2
   valueStep2 = step2.querySelector('input[name="option"]:checked').value;
 
+  const finalCode = createDiscountCode(valueStep1, valueStep2);
 
-  //Creating Discount code Step 1, even 10000 years later, always takes the 2 last numbers
-  const reverseValueStep1 = valueStep1.split("").reverse().join("");
-  const newValueStep1 = Number(reverseValueStep1[0]) + Number(reverseValueStep1[1]);
-  
-  //Creating Discount code Step 2
-  const newValueStep2 = valueStep2.split("").reverse()
-                        .slice(0,4).reverse().join("")
-                        .trim().toUpperCase().replace(/[A , " "]/gi, "");
+  discountCode.innerHTML = finalCode;
 
-
-  //Render discount code 
-  discountCode.innerHTML = newValueStep1 + newValueStep2;
-
-  //Show and hide
   step2.classList.add("hide");
   step2.classList.remove("show");
   step3.classList.add("show");
-  // step3.classList.remove("hide");
+  step3.classList.remove("hide");
 
 
-
-  //Create set Interval to Step 3
   const updateTime = () => {
   
     if (timeRemaining > 0) {
@@ -77,7 +69,7 @@ step2.addEventListener("submit", function (event) {
       countDown.classList.add("hide"); 
       countDown.classList.remove("show");
       timeOver.classList.add("show");
-      // timeOver.classList.remove("hide");
+      timeOver.classList.remove("hide");
 
       allDiscountCode.classList.add("hide");
       allDiscountCode.classList.remove("show");

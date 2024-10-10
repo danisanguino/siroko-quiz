@@ -9,9 +9,14 @@
 }
 
 body {
-  background-color: white;
   font-family: inconsolata;
-  background-color: antiquewhite;
+  color: white;
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat;  
+  background-attachment: fixed; 
+  height: 100vh;  
 }
 
 /* SHOW AND HIDE STEPS*/
@@ -21,6 +26,19 @@ body {
 
 .show {
   display: block;
+}
+
+/* HEADER */
+
+header {
+  margin: 25px;
+}
+
+
+/* CONTAINER STEPS */
+
+.container-step {
+  background-color: black;
 }
 
 
