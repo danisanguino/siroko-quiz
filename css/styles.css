@@ -1,11 +1,17 @@
 @import './reset.css';  
-@import './colors.css';  
+@import './colors.css'; 
+@import "./steps.css"; 
 
 @font-face {
   font-family: 'siroko';
   src: url('../assets/fonts/LiberatorSIROKO-Heavy.ttf') format('truetype'); 
   font-weight: 800;
   font-style: normal;
+}
+
+html body {
+  height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -16,7 +22,10 @@ body {
   background-position: center;  
   background-repeat: no-repeat;  
   background-attachment: fixed; 
-  height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+  overflow-x: hidden;
 }
 
 /* SHOW AND HIDE STEPS*/
@@ -28,18 +37,29 @@ body {
   display: block;
 }
 
-/* HEADER */
 
 header {
   margin: 25px;
 }
 
-
-/* CONTAINER STEPS */
-
-.container-step {
+footer {
+  height: 98px;
   background-color: black;
+
 }
 
+footer .legal-text {
+  margin: 25px;
+  color: var(--color-grey);
+}
+
+footer .legal-text p {
+  font-size: 1.4rem;
+  line-height: 2.80rem;
+}
+
+footer .legal-text a {
+  color: white;
+}
 
 
