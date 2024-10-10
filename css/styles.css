@@ -1,5 +1,17 @@
+@import './reset.css';  
+@import './colors.css';  
+
+@font-face {
+  font-family: 'siroko';
+  src: url('../assets/fonts/LiberatorSIROKO-Heavy.ttf') format('truetype'); 
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
-  background-color: aqua;
+  background-color: white;
+  font-family: inconsolata;
+  background-color: antiquewhite;
 }
 
 /* SHOW AND HIDE STEPS*/
@@ -10,4 +22,6 @@ body {
 .show {
   display: block;
 }
+
+
 
