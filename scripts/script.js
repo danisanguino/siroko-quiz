@@ -9,6 +9,7 @@ const step3 = document.getElementById("step3");
 const allDiscountCode = document.getElementById("all-result-code")
 const discountCode = document.getElementById("result-code");
 
+const clockCountDown = document.getElementById("clock-countdown")
 const countDown = document.getElementById("count-down");
 const timeOver = document.getElementById("time-over");
 
@@ -17,7 +18,7 @@ const buttonCopy = document.getElementById("button-copy");
 let valueStep1 = "";
 let valueStep2 = "";
 
-let timeRemaining = 1199; //in seconds
+let timeRemaining = 4; //in seconds
 
 
 // STEP 1
@@ -31,8 +32,8 @@ step1.addEventListener("submit", function (event) {
   valueStep1 = step1.querySelector('input[name="year"]:checked').value;
 
   step1.classList.add("hide");
-  step1.classList.remove("show");
-  step2.classList.add("show");
+  // step1.classList.remove("show");
+  // step2.classList.add("show");
   step2.classList.remove("hide");
 });
 
@@ -52,8 +53,8 @@ step2.addEventListener("submit", function (event) {
   discountCode.innerHTML = finalCode;
 
   step2.classList.add("hide");
-  step2.classList.remove("show");
-  step3.classList.add("show");
+  // step2.classList.remove("show");
+  // step3.classList.add("show");
   step3.classList.remove("hide");
 
 
@@ -66,13 +67,13 @@ step2.addEventListener("submit", function (event) {
     } else {
       clearInterval(interval); 
       countDown.textContent = "0"; 
-      countDown.classList.add("hide"); 
-      countDown.classList.remove("show");
-      timeOver.classList.add("show");
+      clockCountDown.classList.add("hide"); 
+      // countDown.classList.remove("show");
+      // timeOver.classList.add("show");
       timeOver.classList.remove("hide");
 
       allDiscountCode.classList.add("hide");
-      allDiscountCode.classList.remove("show");
+      // allDiscountCode.classList.remove("show");
     }
   };
   

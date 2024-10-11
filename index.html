@@ -18,13 +18,14 @@
 
 <body>
     <header>
-      <a href=""><img src="assets/icons/SK-small.svg" alt="logo siroko"/></a>
+      <a href=""><img src="assets/icons/SK-small.svg" alt="logo siroko" class="logo"/></a>
     </header>
 
     <!-- STEP 01 -->
     <section class="container-step show" id="step1">
 
         <div class="container-step__header-form">
+
             <div class="container-step__header-form--number-step">
               <p>PASO 1 DE 2</p>
             </div>
@@ -37,7 +38,10 @@
         </div>
 
         <div class="container-step__content-form">
-            <p>USO SIROCO DESDE...</p>
+            
+            <div class="container-step__content-form--text">
+              <p>USO SIROCO DESDE...</p>
+            </div> 
 
             <form class="container-step__content-form--quiz">
               <label>
@@ -60,6 +64,7 @@
     <section class="container-step hide" id="step2">
 
         <div class="container-step__header-form">
+
             <div class="container-step__header-form--number-step">
               <p>PASO 2 DE 2</p>
             </div>
@@ -68,7 +73,10 @@
         </div>
 
         <div class="container-step__content-form">
-            <p>POR UNAS GAFAS SIROKO, YO...</p>
+
+            <div class="container-step__content-form--text">
+              <p>POR UNAS GAFAS SIROKO, YO...</p>
+            </div> 
 
             <form class="container-step__content-form--quiz">
               <label>
@@ -91,6 +99,7 @@
     <section class="container-step hide" id="step3">
 
       <div class="container-step__header-form">
+
         <div class="container-step__header-form--number-step">
           <p>TU PREMIO ESTÁ LISTO</p>
         </div>
@@ -99,7 +108,9 @@
       </div>
 
       <div class="container-step__content-form">
-        <p>LO PROMETIDO ES DEUDA</p>
+        <div class="container-step__content-form--text">
+          <p>LO PROMETIDO ES DEUDA</p>
+        </div>  
 
         <div class="container-step__content-form--quiz">
           
@@ -107,21 +118,26 @@
             <p class="container-step__content-form--quiz--discount-code-result" id="result-code"></p>
             <button class="container-step__content-form--quiz--discount-code-copy" id="button-copy">Copiar</button>
           </div>
+
           <div id="message"></div>
 
           <div class="container-step__content-form--quiz--describe-text">
             <p>Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
           </div>
 
-          <div class="container-step__content-form--quiz--clock show" id="count-down">
-            20:00
+          <div class="container-step__content-form--quiz--clock-timer" id="clock-countdown" >
+              <img src="assets/icons/clock.svg" alt="reloj cuenta atras"/>
+              <p id="count-down" >
+                20:00
+              </p>
           </div>
+
           <div class="container-step__content-form--quiz--warning hide" id="time-over">
-            Código caducado. <a href="">Reiniciar.</a>
+            <img src="assets/icons/clock.svg" alt="reloj cuenta atras"/>
+            <p>Código caducado. <a href="">Reiniciar</a>.</p>
           </div>
 
-
-          <a href="https://siroko.com" target="_blank" class="container-step__content-form--quiz--submit">Ir s siroko.com -></a>
+          <a href="https://siroko.com" target="_blank" class="container-step__content-form--quiz--submit">Ir a siroko.com -></a>
 
         </div>
     </div>
@@ -131,8 +147,8 @@
 
     <footer>
         <div class="legal-text">
-          <p>2016-2021 Siroko Solutions S.L. </br>
-          Todos los derechos reservados. <a href="#">Ver bases.</a> </p>
+          <p>2016-2021 Siroko Solutions S.L. </p>
+          <p>Todos los derechos reservados. <a href="#">Ver bases</a>.</p>
         </div>
     </footer>
     

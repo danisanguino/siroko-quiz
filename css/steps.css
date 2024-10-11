@@ -4,7 +4,7 @@
 
 .container-step h2 {
   font-family: siroko;
-  font-size: 35px;
+  font-size: 3.5rem;
 }
 
 .container-step__header-form {
@@ -17,7 +17,7 @@
   color: var(--color-green-dark);
   font-size: 9px;
   font-weight: 700;
-  padding: 5px;
+  padding: 3px 6px 3px 6px;
   border-radius: 3px;
   width: fit-content;
   margin-bottom: 20px;
@@ -33,14 +33,82 @@
 .container-step__content-form {
   background-color: var(--color-brown);
   border-radius: 3px;
-  margin: 20px 25px 0 25px;
-  padding: 15px;
+  margin: 20px 25px 20px 25px;
+  padding: 20px;
 }
 
-.container-step__content-form p {
+.container-step__content-form--text {
+  margin-bottom: 10px;
+}
+
+.container-step__content-form--text p {
   font-family: inter;
   font-size: 1.2rem;
   line-height: 1.64rem;
   font-weight: 700;
   color: var(--color-yellow);
 }
+
+.container-step__content-form--quiz--discount-code {
+  background: linear-gradient(to left, white, #BDBDBD);
+  border-radius: 2px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto; 
+  align-items: center; 
+}
+
+.container-step__content-form--quiz--discount-code p {
+  font-family: inconsolata;
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: black;
+}
+
+.container-step__content-form--quiz--discount-code button {
+  font-family: inconsolata;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+  background-color: transparent;
+  padding: 6px 8px 6px 8px;
+}
+
+.container-step__content-form--quiz--describe-text{
+  margin:10px 0 10px 0;
+}
+
+.container-step__content-form--quiz--describe-text p {
+  font-size: 1.6rem;
+  line-height: 1.872rem;
+  font-weight: 400;
+}
+
+.container-step__content-form--quiz--clock-timer {
+  background-color: var(--color-brown-dark);
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container-step__content-form--quiz--clock-timer p {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.container-step__content-form--quiz--warning {
+  background-color: var(--color-red);
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container-step__content-form--quiz--warning p {
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
+
