@@ -32,8 +32,11 @@ header {
   margin: 25px;
 }
 
+.logo-complete {
+  display: none;
+}
+
 footer {
-  height: 98px;
   background-color: black;
   position: relative;
   bottom: 0;
@@ -42,25 +45,58 @@ footer {
 }
 
 footer .legal-text {
-  margin: 25px;
+  margin: 40px 25px;
   color: var(--color-grey);
 }
 
 footer .legal-text p {
   font-size: 1.4rem;
-  line-height: 2.80rem;
+  line-height: 3.50rem;
 }
 
 footer .legal-text a {
   color: white;
 }
 
-/* SHOW AND HIDE STEPS*/
+
+/* SHOW AND HIDE STEPS AND CLOCK*/
 .hide {
   display: none;
 }
 
 @media (min-width: 768px) { 
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .logo-complete {
+    display: block;
+  }
+  
+}
+
+@media (min-width: 1200px) { 
+
+  header {
+    width: 940px;
+    margin: 25px auto;
+  }
+
+  .container-step {
+    width: 940px;
+    margin: 0px auto;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .legal-text {
+    width: 940px;
+    margin: 40px auto;
+  }
 
 }
 

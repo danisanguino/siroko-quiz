@@ -1,11 +1,16 @@
+.container-step__content-form--quiz {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
 label {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 1.5rem;
 	color: white;
-	margin-bottom: 10px;
 	width: 100%;
 	float: left;
 	cursor: pointer;
-	padding: 0 100px;
+	padding: 0 10px;
 	box-sizing: border-box;
 	background: black;
 	transition: all 0.5s ease 0s;
@@ -20,7 +25,7 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label {
-	line-height: 3em;
+	line-height: 3.1em;
   border-radius: 3px;
 }
 
@@ -29,19 +34,18 @@ input[type="radio"]:disabled + label {
 	cursor: not-allowed;
 }
 input[type="radio"]:checked:disabled + label:after {
-	border-color: red;
+	border-color: white;
 }
 
 /* circulito */
 input[type="radio"] + label:before {
 	content: "";
-	width: 26px;
-	height: 26px;
+	width: 22px; 
+	height: 22px;
 	float: left;
-	margin-right: 0.5em;
-	border: 2px solid red;
-	/* background: #fff; */
-	margin-top: 0.5em;
+	margin-right: 0.7em;
+	border: 3px solid red;
+	margin-top: 0.6em;
   border-radius: 100%;
 }
 
@@ -56,8 +60,8 @@ input[type="radio"]:checked + label:after {
 	height: 0;
 	border: 7px solid #0fbf12;
 	float: left;
-	margin-left: -1.85em;
-	margin-top: 1em;
+	margin-left: -2.10em;
+	margin-top: 1.07em;
 	border-radius: 50%;
 }
 
@@ -75,12 +79,15 @@ input[type="radio"]:checked:disabled + label:before {
 	border-color: #bdbdbd;
 }
 
-.container-step__content-form--quiz--submit {
+
+/* Submit button */
+.container-step__content-form--quiz--submit
+/* .button-submit */
+ {
   background-color: var(--color-green);
   width: 100%;
   color: white;
   border-radius: 3px;
-  margin-top: 10px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -88,11 +95,25 @@ input[type="radio"]:checked:disabled + label:before {
   border: none;
   text-decoration: none;
   cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.container-step__content-form--quiz--submit img {
+  transition: transform 0.3s ease;
+}
+
+.container-step__content-form--quiz--submit:hover {
+	background-color: var(--color-green-dark);
+}
+
+.container-step__content-form--quiz--submit:hover  img {
+	transform: translateX(5px);
 }
 
 .container-step__content-form--quiz--submit  p{
   font-family: inter;
   font-size: 1.5rem;
+	line-height: 20px;
   font-weight: 700;
   margin-right: 7px;
   color: white;

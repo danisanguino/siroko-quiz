@@ -14,6 +14,7 @@ const countDown = document.getElementById("count-down");
 const timeOver = document.getElementById("time-over");
 
 const buttonCopy = document.getElementById("button-copy");
+const copyMessage = document.getElementById("message");
 
 let valueStep1 = "";
 let valueStep2 = "";
@@ -32,8 +33,6 @@ step1.addEventListener("submit", function (event) {
   valueStep1 = step1.querySelector('input[name="year"]:checked').value;
 
   step1.classList.add("hide");
-  // step1.classList.remove("show");
-  // step2.classList.add("show");
   step2.classList.remove("hide");
 });
 
@@ -53,8 +52,6 @@ step2.addEventListener("submit", function (event) {
   discountCode.innerHTML = finalCode;
 
   step2.classList.add("hide");
-  // step2.classList.remove("show");
-  // step3.classList.add("show");
   step3.classList.remove("hide");
 
 
@@ -68,12 +65,9 @@ step2.addEventListener("submit", function (event) {
       clearInterval(interval); 
       countDown.textContent = "0"; 
       clockCountDown.classList.add("hide"); 
-      // countDown.classList.remove("show");
-      // timeOver.classList.add("show");
       timeOver.classList.remove("hide");
-
       allDiscountCode.classList.add("hide");
-      // allDiscountCode.classList.remove("show");
+      copyMessage.classList.add("hide");
     }
   };
   
@@ -83,6 +77,7 @@ step2.addEventListener("submit", function (event) {
 
 //BUTTON COPY
 buttonCopy.addEventListener("click", copyToClipboard);
+
 
 
 
