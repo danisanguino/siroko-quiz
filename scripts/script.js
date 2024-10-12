@@ -14,7 +14,9 @@ const countDown = document.getElementById("count-down");
 const timeOver = document.getElementById("time-over");
 
 const buttonCopy = document.getElementById("button-copy");
-const copyMessage = document.getElementById("message");
+const timeOverMessage = document.getElementById("message-time-over");
+const copyMessage = document.getElementById("message-copy");
+const buttonGoToSiroko = document.getElementById("go-to-siroko");
 
 let valueStep1 = "";
 let valueStep2 = "";
@@ -64,6 +66,7 @@ step2.addEventListener("submit", function (event) {
     } else {
       clearInterval(interval); 
       countDown.textContent = "0"; 
+      timeOverMessage.textContent = "El tiempo ha terminado, pero siempre es buen momento para intentarlo de nuevo. Te invitamos a dar el siguiente paso y volver a empezar con nosotros.";
       clockCountDown.classList.add("hide"); 
       timeOver.classList.remove("hide");
       allDiscountCode.classList.add("hide");
@@ -77,6 +80,11 @@ step2.addEventListener("submit", function (event) {
 
 //BUTTON COPY
 buttonCopy.addEventListener("click", copyToClipboard);
+
+//BUTTON EXTERNAL LINK
+buttonGoToSiroko.addEventListener("click", function () {
+  window.open("https://www.siroko.com", "_blank");
+});
 
 
 

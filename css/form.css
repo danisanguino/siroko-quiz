@@ -12,12 +12,12 @@ label {
 	cursor: pointer;
 	padding: 0 10px;
 	box-sizing: border-box;
-	background: black;
+	background: var(--color-input);
 	transition: all 0.5s ease 0s;
 }
 
 label:hover {
-  background: yellow;
+  background: var(--color-input-over);
 }
 
 input[type="radio"] {
@@ -44,13 +44,13 @@ input[type="radio"] + label:before {
 	height: 22px;
 	float: left;
 	margin-right: 0.7em;
-	border: 3px solid red;
+	border: 3px solid white;
 	margin-top: 0.6em;
   border-radius: 100%;
 }
 
 input[type="radio"]:checked + label {
-	background: #c1eec2;
+	background: var(--color-input-over);
 }
 
 /* bolita dentro */
@@ -58,7 +58,7 @@ input[type="radio"]:checked + label:after {
 	content: "";
 	width: 0;
 	height: 0;
-	border: 7px solid #0fbf12;
+	border: 7px solid white;
 	float: left;
 	margin-left: -2.10em;
 	margin-top: 1.07em;
@@ -67,28 +67,17 @@ input[type="radio"]:checked + label:after {
 
 
 input[type="radio"]:checked + label:before {
-	border-color: #0fbf12;
-}
-
-input[type="radio"]:checked:disabled + label {
-	background: red;
-	color: #fff !important;
-}
-
-input[type="radio"]:checked:disabled + label:before {
-	border-color: #bdbdbd;
+	border-color: white;
 }
 
 
 /* Submit button */
-.container-step__content-form--quiz--submit
-/* .button-submit */
- {
+.button-submit {
   background-color: var(--color-green);
   width: 100%;
   color: white;
   border-radius: 3px;
-  padding: 10px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,19 +87,19 @@ input[type="radio"]:checked:disabled + label:before {
 	transition: background-color 0.3s ease;
 }
 
-.container-step__content-form--quiz--submit img {
+.button-submit img {
   transition: transform 0.3s ease;
 }
 
-.container-step__content-form--quiz--submit:hover {
+.button-submit:hover {
 	background-color: var(--color-green-dark);
 }
 
-.container-step__content-form--quiz--submit:hover  img {
+.button-submit:hover img {
 	transform: translateX(5px);
 }
 
-.container-step__content-form--quiz--submit  p{
+.button-submit p{
   font-family: inter;
   font-size: 1.5rem;
 	line-height: 20px;

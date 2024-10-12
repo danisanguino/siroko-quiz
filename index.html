@@ -64,7 +64,7 @@
               <input type="radio" id="year2021" name="year" value="2021" >
               <label for="year2021">2021</label>
 
-              <button type="submit" class="container-step__content-form--quiz--submit">
+              <button type="submit" class="button-submit">
                 <p>Siguiente</p>
                 <img src="assets/icons/Right.svg" />
               </button>
@@ -106,7 +106,7 @@
               <input type="radio" id="option04" name="option" value="Regalaría una ternera">
               <label for="option04">Regalaría una ternera</label>
 
-              <button type="submit" class="container-step__content-form--quiz--submit">
+              <button type="submit" class="button-submit">
                 <p>Siguiente</p>
                 <img src="assets/icons/Right.svg" />
               </button>
@@ -140,10 +140,10 @@
             <button class="container-step__content-form--quiz--discount-code-copy" id="button-copy">Copiar</button>
           </div>
 
-          <p class="container-step__content-form--quiz--discount-code-copied" id="message"></p>
+          <p class="container-step__content-form--quiz--discount-code-copied" id="message-copy"></p>
 
           <div class="container-step__content-form--quiz--describe-text">
-            <p>Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
+            <p id="message-time-over">Introduce este código en tu próxima compra para conseguir tu premio. ¡Disponible durante 20 minutos!</p>
           </div>
 
           <div class="container-step__content-form--quiz--clock-timer" id="clock-countdown" >
@@ -156,10 +156,10 @@
             <p>Código caducado. <a href="">Reiniciar</a>.</p>
           </div>
 
-          <a href="http://siroko.com" target="_blank" class="container-step__content-form--quiz--goToSiroko">
+          <button type="submit" class="button-submit" id="go-to-siroko">
             <p>Ir a siroko.com</p>
-            <img src="assets/icons/Right.svg" alt="ir a web oficial de siroko"/>
-          </a>
+            <img src="assets/icons/Right.svg" />
+          </button>
           
 
         </div>
