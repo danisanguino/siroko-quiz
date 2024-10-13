@@ -21,16 +21,15 @@ const buttonGoToSiroko = document.getElementById("go-to-siroko");
 let valueStep1 = "";
 let valueStep2 = "";
 
-let timeRemaining = 4; //in seconds
+let timeRemaining = 1199; //in seconds
 
 
 // STEP 1
 // The form data is saved in a variable, step 1 is hidden, and step 2 is displayed.
 
-step1.addEventListener("submit", function (event) {
+step1.addEventListener("submit", (event) => {
 
   event.preventDefault();
-  
   
   valueStep1 = step1.querySelector('input[name="year"]:checked').value;
 
@@ -43,7 +42,7 @@ step1.addEventListener("submit", function (event) {
 // The form data is saved using the EventListener. This step is hidden, and STEP 3 is displayed. 
 // A discount code is generated, and the countdown begins.
 
-step2.addEventListener("submit", function (event) {
+step2.addEventListener("submit", (event) => {
 
   event.preventDefault();
 
@@ -66,7 +65,7 @@ step2.addEventListener("submit", function (event) {
     } else {
       clearInterval(interval); 
       countDown.textContent = "0"; 
-      timeOverMessage.textContent = "El tiempo ha terminado, pero siempre es buen momento para intentarlo de nuevo. Te invitamos a dar el siguiente paso y volver a empezar con nosotros.";
+      timeOverMessage.textContent = "El tiempo ha terminado, pero siempre es buen momento para intentarlo de nuevo. Si no has copiado el código, te invitamos a dar el siguiente paso y volver a empezar con nosotros.";
       clockCountDown.classList.add("hide"); 
       timeOver.classList.remove("hide");
       allDiscountCode.classList.add("hide");
@@ -82,7 +81,7 @@ step2.addEventListener("submit", function (event) {
 buttonCopy.addEventListener("click", copyToClipboard);
 
 //BUTTON EXTERNAL LINK
-buttonGoToSiroko.addEventListener("click", function () {
+buttonGoToSiroko.addEventListener("click", () => {
   window.open("https://www.siroko.com", "_blank");
 });
 

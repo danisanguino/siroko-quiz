@@ -1,11 +1,11 @@
 export async function copyToClipboard() {
   
-  const text = document.getElementById('result-code').innerText;
+  const text = document.getElementById("result-code").innerText;
 
   try {
     await navigator.clipboard.writeText(text);
-    document.getElementById("message").innerText = 'CÓDIGO COPIADO!';
+    document.getElementById("message-copy").innerText = "CÓDIGO COPIADO!";
   } catch (err) {
-    document.getElementById("message").innerText = 'Error!!';
+    document.getElementById("message-copy").innerText = "Error!!";
   }
 }

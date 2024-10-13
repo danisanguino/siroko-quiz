@@ -10,7 +10,7 @@ label {
 	width: 100%;
 	float: left;
 	cursor: pointer;
-	padding: 0 10px;
+	padding: 0 15px;
 	box-sizing: border-box;
 	background: var(--color-input);
 	transition: all 0.5s ease 0s;
@@ -37,15 +37,14 @@ input[type="radio"]:checked:disabled + label:after {
 	border-color: white;
 }
 
-/* circulito */
 input[type="radio"] + label:before {
 	content: "";
-	width: 22px; 
-	height: 22px;
+	width: 20px; 
+	height: 20px;
 	float: left;
 	margin-right: 0.7em;
 	border: 3px solid white;
-	margin-top: 0.6em;
+	margin-top: 0.7em;
   border-radius: 100%;
 }
 
@@ -53,25 +52,23 @@ input[type="radio"]:checked + label {
 	background: var(--color-input-over);
 }
 
-/* bolita dentro */
 input[type="radio"]:checked + label:after {
 	content: "";
 	width: 0;
 	height: 0;
-	border: 7px solid white;
+	border: 6px solid white;
 	float: left;
-	margin-left: -2.10em;
-	margin-top: 1.07em;
+	margin-left: -1.96em;
+	margin-top: 1.17em;
 	border-radius: 50%;
 }
-
 
 input[type="radio"]:checked + label:before {
 	border-color: white;
 }
 
 
-/* Submit button */
+/* Submit form and external link button */
 .button-submit {
   background-color: var(--color-green);
   width: 100%;
@@ -91,12 +88,12 @@ input[type="radio"]:checked + label:before {
   transition: transform 0.3s ease;
 }
 
-.button-submit:hover {
-	background-color: var(--color-green-dark);
-}
-
 .button-submit:hover img {
 	transform: translateX(5px);
+}
+
+.button-submit:hover {
+	background-color: var(--color-green-dark);
 }
 
 .button-submit p{

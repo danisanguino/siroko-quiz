@@ -1,4 +1,4 @@
-export const createDiscountCode = (valueStep1, valueStep2)=> {
+export const createDiscountCode = (valueStep1, valueStep2) => {
 
     //Creating Discount code Step 1, even 10000 years later, always takes the 2 last numbers
     const reverseValueStep1 = valueStep1.split("").reverse().join("");

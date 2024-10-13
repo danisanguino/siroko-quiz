@@ -7,11 +7,7 @@ Welcome to the Siroko Discount Code App! This application allows users to unlock
 - [Features](#features)
 - [How It Works](#how-it-works)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Time Limit](#time-limit)
-- [Resetting](#resetting)
-- [Contact](#contact)
+
 
 ## Features
 
