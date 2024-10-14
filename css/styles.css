@@ -86,7 +86,8 @@ footer .legal-text a {
 
   header {
     width: 940px;
-    margin: 25px auto;
+    margin: 50px auto;
+    margin-bottom: 25px;
   }
 
   .container-step {
